@@ -55,20 +55,24 @@
       } else if (tamu === "Mahasiswa") {
         additionalInput.innerHTML = `
         <div class="user-box">
+          <input name="Universitas (Mahasiswa)" id="Universitas" type="text" required>
+          <label>Universitas</label>
+        </div>
+        <div class="user-box">
           <input name="Jurusan (Mahasiswa)" id="Jurusan" type="text" required>
           <label>Jurusan</label>
-          </div>
-          <div class="user-box">
-            <input name="Angkatan (Mahasiswa)" id="Angkatan" type="text" required>
-            <label>Angkatan</label>
-          </div>
+        </div>
+        <div class="user-box">
+          <input name="Angkatan (Mahasiswa)" id="Angkatan" type="text" required>
+          <label>Angkatan</label>
+        </div>
         `;
         submitBtn.disabled = false;
       } else if (tamu === "Lainnya") {
         additionalInput.innerHTML = `
           <div class="user-box">
-            <input name="Status (Lainnya)" id="Status (Lainnya)" type="text" required>
-            <label>Status</label>
+            <input name="Kerabat/Teman (Lainnya)" id="Kerabat/Teman (Lainnya)" type="text" required>
+            <label>Kerabat/Teman Anda</label>
           </div>
         `;
         submitBtn.disabled = false;
@@ -112,7 +116,7 @@
           confirmButtonText: 'OK'
         }).then((result) => {
           if (result.isConfirmed) {
-            window.location.replace('https://reformatika23.github.io/Undangan-Digital-Reformatika-23/');
+            window.location.replace('about:blank');
           }
         });
       })
